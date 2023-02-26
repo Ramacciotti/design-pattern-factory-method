@@ -4,19 +4,21 @@ import com.ramacciotti.patterns.factory_method.factory.parent.CompanyFactory;
 import com.ramacciotti.patterns.factory_method.products.concrete.Developer;
 import com.ramacciotti.patterns.factory_method.products.interfac.Employee;
 
-// Inherit Factory Method create()
-public class DeveloperFactory extends CompanyFactory {
+/**
+ * <p>The only responsability of this class is to create an new Developer (Single responsibility principle - SOLID). </p>
+ */
+public class DeveloperFabricator extends CompanyFactory {
 
+    /**
+     *  <p>Inherit Factory Method create() from CompanyFactory. </p>
+     * @return a new Developer employee
+     */
     @Override
     public Employee create() {
 
         System.out.println("** Creating Developer...");
 
-        Developer developer = new Developer("Marcelo", "marcelo435@gmail.com");
-        developer.work();
-        developer.eat();
-
-        return developer;
+        return new Developer("Marcelo", "marcelo435@gmail.com");
 
     }
 
