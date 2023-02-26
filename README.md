@@ -1,10 +1,16 @@
-# Design Patterns / Creational Pattern: Factory Method
+# Design Patterns / Creational: Factory Method
 
-<p><b>Scenario:</b> You are an uber software engineer. The entire application was designed around cars, but now, there is a demand from the business area to create the Uber Eats service. This means that now we will also have Bikes.</p>
+<p>The Factory Method suggests that you replace direct object construction calls (using the new operator) with calls to your Factory Method. Objects returned by a Factory Method are often referred to as "products".
 
-<p>Your application should do the folling:</p>
+At first glance, this change might seem pointless: we just moved the constructor call from one part of the program to another. However, consider this: you can now override the Factory Method in a subclass and change the class of products being created by the method.
 
-* The direct calls for constructing objects of the class must be replaced by an intermediate method that will play the role of the factory.</li>
+However, there is a small limitation: subclasses can return different types of products only if those products have a common base class or interface. Also, the Factory Method in the base class must have its return type declared as this interface.<p>
+
+<hr>
+
+<p><b>Scenario:</b> You are an uber software engineer. The entire application was designed around cars, but now, there is a demand from the business area to create the Uber Eats service. This means that now we will also have Bikes. Solve this problem implementing the Factory Method Pattern.</p>
+
+<hr>
 
 ### How to run this app?
 
